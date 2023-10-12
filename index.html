@@ -29,7 +29,7 @@
     <!-- Alpine JS -->
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>
-  <body clas="antialiased">
+  <body clas="antialiased min-h-screen">
     <!-- Navbar -->
     <nav class="py-9 px-4" x-data="{navOpen:false}">
       <!--  -->
@@ -45,11 +45,13 @@
           <div class="hidden lg:block lg:order-2">
             <ul class="flex justify-center items-center gap-12 text-base">
               <li><a href="" class="font-bold">Home </a></li>
-              <li><a href="" class="text-grey">Discovery </a></li>
               <li>
-                <a href="" class="text-grey">Special Deals</a>
+                <a href="" class="text-grey hover:font-bold">Discovery </a>
               </li>
-              <li><a href="" class="text-grey">Contact </a></li>
+              <li>
+                <a href="" class="text-grey hover:font-bold">Special Deals</a>
+              </li>
+              <li><a href="" class="text-grey hover:font-bold">Contact </a></li>
             </ul>
           </div>
           <div class="hidden md:block md:order-3">
@@ -166,13 +168,13 @@
     </nav>
 
     <!-- Hero -->
-    <section>
-      <div class="container mx-auto">
+    <section class="container mx-auto px-4 mb-8">
+      <div>
         <div class="grid grid-cols-12 gap-4 px-5 justify-center items-center">
           <!-- cta -->
-          <div class="col-span-12 order-2 py-2 lg:col-span-4 lg:order-1">
+          <div class="col-span-12 order-2 py-2 lg:col-span-5 lg:order-1">
             <button
-              class="flex justify-center items-center mx-auto gap-5 py-2 px-9 rounded-xl mb-3 lg:mx-0 lg:justify-start bg-white lg:px-3 shadow-md"
+              class="flex justify-center items-center mx-auto gap-5 py-2 px-9 rounded-xl mb-3 lg:mx-0 lg:justify-start bg-white lg:px-3 shadow-md hover:shadow-xl transition-all duration-150"
             >
               <span>Explore the world!</span>
               <img src="./src/asset/icons/work.svg" alt="" />
@@ -191,28 +193,242 @@
               possible
             </p>
 
-            <div
-              class="flex flex-col my-5 gap-3 md:flex-row justify-center items-center lg:justify-start w-full"
-            >
+            <div class="flex flex-col gap-5 my-5 md:flex-row">
               <button
-                class="rounded-full text-base py-3 px-9 font-bold bg-ungu text-white shadow-md lg:px-7 lg:py-1 w-full sm:w-1/4 lg:w-full"
+                class="bg-ungu rounded-xl py-2 px-9 w-full sm:w-1/2 text-white font-bold hover:shadow-md transition-all duration-150"
               >
                 <small>Get Started</small>
               </button>
+
               <button
-                class="rounded-full text-base py-3 px-9 font-bold flex justify-center items-center bg-red-100 lg:px-7 lg:py-1 w-full sm:w-1/4 lg:w-full"
+                class="bg-white rounded-xl py-2 px-9 w-full sm:w-1/2 font-bold flex gap-3 items-center justify-center shadow-md hover:shadow-xl transition-all duration-150"
               >
                 <img src="./src/asset/icons/play.svg" alt="" />
-                <small class="font-bold">Watch Demo</small>
+                <small class="font-bold">Demo</small>
               </button>
             </div>
           </div>
 
           <!-- Hero Image -->
           <div
-            class="col-span-12 order-1 flex justify-center items-center lg:col-span-8 lg:order-2"
+            class="col-span-12 order-1 flex justify-center items-center lg:col-span-7 lg:order-2"
           >
             <img src="./src/asset/img/hero.png" alt="" class="w-3/4" />
+          </div>
+
+          <div class="col-span-12 order-3 py-8">
+            <div
+              class="flex flex-wrap justify-center gap-6 sm:gap-7 lg:justify-between"
+            >
+              <div>
+                <img
+                  src="./src/asset/img/hero/hero-1.png"
+                  class="h-5 sm:h-8 opacity-50 hover:opacity-100 duration-150 ease-in-out"
+                />
+              </div>
+              <div>
+                <img
+                  src="./src/asset/img/hero/hero-2.png"
+                  class="h-5 sm:h-8 opacity-50 hover:opacity-100 duration-150 ease-in-out"
+                />
+              </div>
+              <div>
+                <img
+                  src="./src/asset/img/hero/hero-3.png"
+                  class="h-5 sm:h-8 opacity-50 hover:opacity-100 duration-150 ease-in-out"
+                />
+              </div>
+              <div>
+                <img
+                  src="./src/asset/img/hero/hero-4.png"
+                  class="h-5 sm:h-8 opacity-50 hover:opacity-100 duration-150 ease-in-out"
+                />
+              </div>
+              <div>
+                <img
+                  src="./src/asset/img/hero/hero-5.png"
+                  class="h-5 sm:h-8 opacity-50 hover:opacity-100 duration-150 ease-in-out"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Section -->
+    <section class="container mx-auto px-4 mb-12">
+      <div class="grid grid-cols-12">
+        <div
+          class="col-span-12 lg:col-span-4 mb-3 flex items-center justify-center lg:justify-start"
+        >
+          <div>
+            <p
+              class="uppercase text-pink font-bold tracking-wide text-center lg:text-start"
+            >
+              services
+            </p>
+            <h1 class="font-bold text-2xl text-center lg:text-start">
+              Our top value categories for you
+            </h1>
+          </div>
+        </div>
+
+        <div class="col-span-12 lg:col-span-8 flex flex-col gap-5 sm:flex-row">
+          <div
+            class="flex flex-col gap-5 justify-center items-center p-5 border border-slate-100 rounded-xl h-[279px] sm:h-[443px] sm:gap-10 w-full sm:w-1/2 md:w-full hover:shadow-xl transition-all duration-150"
+          >
+            <div>
+              <img src="./src/asset/img/services/services-2.png" alt="" />
+            </div>
+            <h2 class="font-extrabold font-inter">Best Tour Guide</h2>
+            <p class="text-grey text-center">
+              What looked like a small patch of purple grass, above five feet.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-5 justify-center items-center p-5 border border-slate-200 rounded-xl h-[279px] sm:h-[443px] sm:gap-10 w-full sm:w-1/2 md:w-full shadow-sm hover:shadow-xl transition-all duration-150"
+          >
+            <div>
+              <img src="./src/asset/img/services/services-3.png" alt="" />
+            </div>
+            <h2 class="font-extrabold font-inter">Easy Booking</h2>
+            <p class="text-grey text-center">
+              Square, was moving across the sand in their direction.
+            </p>
+          </div>
+          <div
+            class="flex flex-col gap-5 justify-center items-center p-5 border border-slate-100 rounded-xl h-[279px] sm:h-[443px] sm:gap-10 w-full sm:w-1/2 md:w-full hover:shadow-xl transition-all duration-150"
+          >
+            <div>
+              <img src="./src/asset/img/services/services-1.png" alt="" />
+            </div>
+            <h2 class="font-extrabold font-inter">Weather Forecast</h2>
+            <p class="text-grey text-center">
+              What looked like a small patch of purple grass, above five feet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Destination -->
+    <section class="container mx-auto px-4 mb-8">
+      <div class="grid grid-cols-12">
+        <div class="col-span-12 mb-3 flex items-center justify-center">
+          <div class="flex flex-col lg:flex-row lg:justify-between w-full">
+            <div>
+              <p
+                class="uppercase text-pink font-bold tracking-wide text-center md:text-xl mb-5 lg:text-start"
+              >
+                top destination
+              </p>
+
+              <h1
+                class="font-bold text-2xl md:text-3xl text-center lg:text-start"
+              >
+                Explore Top Destination
+              </h1>
+            </div>
+
+            <div
+              class="flex justify-between items-center my-5 md:justify-center gap-32"
+            >
+              <button
+                class="rounded-full w-10 lg:w-[4em] lg:h-[4em] border py-1 flex items-center justify-center"
+              >
+                <ion-icon name="arrow-back-outline" class="text-2xl"></ion-icon>
+              </button>
+              <button
+                class="rounded-full w-10 lg:w-[4em] lg:h-[4em] border py-1 flex items-center justify-center bg-ungu text-white"
+              >
+                <ion-icon
+                  name="arrow-forward-outline"
+                  class="text-2xl"
+                ></ion-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="col-span-12 flex flex-col md:flex-row justify-center items-center gap-5 flex-wrap"
+        >
+          <div class="rounded-xl overflow-hidden shadow-lg mb-3">
+            <img
+              src="./src/asset/img/destination/destination-1.png"
+              alt=""
+              class="w-full h-40"
+            />
+            <div class="px-6 py-4">
+              <span class="text-pink font-bold">$550.16</span>
+              <p class="font-bold mb-2 w-full text-base">
+                Paradise Beach, Bantayan Island
+              </p>
+              <p class="text-gray-700 text-base">Rome, Italy</p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="text-orange font-bold flex gap-3 items-center"
+                >4.5 <img src="./src/asset/icons/star.svg" alt=""
+              /></span>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-lg mb-3">
+            <img
+              src="./src/asset/img/destination/destination-2.png"
+              alt=""
+              class="w-full h-40"
+            />
+            <div class="px-6 py-4">
+              <span class="text-pink font-bold">$550.16</span>
+              <p class="font-bold mb-2 w-full text-base">
+                Paradise Beach, Bantayan Island
+              </p>
+              <p class="text-gray-700 text-base">Rome, Italy</p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="text-orange font-bold flex gap-3 items-center"
+                >4.5 <img src="./src/asset/icons/star.svg" alt=""
+              /></span>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-lg mb-3">
+            <img
+              src="./src/asset/img/destination/destination-3.png"
+              alt=""
+              class="w-full h-40"
+            />
+            <div class="px-6 py-4">
+              <span class="text-pink font-bold">$550.16</span>
+              <p class="font-bold mb-2 w-full text-base">
+                Mountain View, Above the cloud
+              </p>
+              <p class="text-gray-700 text-base">United Emirates Arab</p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="text-orange font-bold flex gap-3 items-center"
+                >4.5 <img src="./src/asset/icons/star.svg" alt=""
+              /></span>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-lg mb-3">
+            <img
+              src="./src/asset/img/destination/destination-3.png"
+              alt=""
+              class="w-full h-40"
+            />
+            <div class="px-6 py-4">
+              <span class="text-pink font-bold">$550.16</span>
+              <p class="font-bold mb-2 w-full text-base">
+                Mountain View, Above the cloud
+              </p>
+              <p class="text-gray-700 text-base">United Emirates Arab</p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="text-orange font-bold flex gap-3 items-center"
+                >4.5 <img src="./src/asset/icons/star.svg" alt=""
+              /></span>
+            </div>
           </div>
         </div>
       </div>
