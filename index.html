@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Navbar</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <link href="./src/css/style.css" rel="stylesheet" />
+
+    <!-- Alpine JS -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body clas="antialiased">
+    <!-- Navbar -->
+    <nav class="py-9 px-4" x-data="{navOpen:false}">
+      <!--  -->
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <img src="./src/asset//img/logo-nav.png" alt="" class="order-2" />
+          <img
+            src="./src/asset/icons/toggle.svg"
+            alt=""
+            class="order-2 md:order-1 lg:hidden"
+            @click="navOpen = !navOpen"
+          />
+          <div class="hidden lg:block lg:order-2">
+            <ul class="flex justify-center items-center gap-12 text-base">
+              <li><a href="" class="font-bold">Home </a></li>
+              <li><a href="" class="text-grey">Discovery </a></li>
+              <li>
+                <a href="" class="text-grey">Special Deals</a>
+              </li>
+              <li><a href="" class="text-grey">Contact </a></li>
+            </ul>
+          </div>
+          <div class="hidden md:block md:order-3">
+            <button
+              class="bg-white rounded-full text-grey font-bold py-4 px-8 text-sm grow"
+            >
+              Login
+            </button>
+            <button
+              class="bg-ungu rounded-full text-white font-bold py-4 px-8 text-sm grow"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div
+        x-show="navOpen"
+        x-data="{open:false}"
+        class="fixed bottom-0 left-0 right-0 p-4 bg-white border lg:hidden"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 scale-90"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-90"
+      >
+        <ul class="flex justify-evenly items-center gap-3">
+          <li>
+            <a
+              href=""
+              class="flex flex-col justify-center items-center gap-1 text-ungu"
+            >
+              <ion-icon
+                name="home-outline"
+                class="text-xl text-ungu"
+              ></ion-icon>
+              <span class="text-base font-bold">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex flex-col justify-center items-center gap-1">
+              <ion-icon
+                name="albums-outline"
+                class="text-grey text-xl"
+              ></ion-icon>
+              <span class="text-base text-grey opacity-50 font-normal"
+                >Discover</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex flex-col justify-center items-center gap-1">
+              <ion-icon
+                name="sparkles-outline"
+                class="text-grey text-xl"
+              ></ion-icon>
+              <span class="text-base text-grey opacity-50 font-normal"
+                >Special
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="flex flex-col justify-center items-center gap-1">
+              <ion-icon
+                name="call-outline"
+                class="text-grey text-xl"
+              ></ion-icon>
+              <span class="text-base text-grey opacity-50 font-normal"
+                >Contact</span
+              >
+            </a>
+          </li>
+          <li class="focus:outline-none">
+            <button
+              class="flex flex-col justify-center items-center gap-1"
+              @click="open =!open"
+            >
+              <ion-icon
+                name="menu-outline"
+                class="text-grey text-xl"
+              ></ion-icon>
+              <span class="text-base text-grey opacity-50 font-normal"
+                >More
+              </span>
+            </button>
+          </li>
+        </ul>
+
+        <div
+          x-show="open"
+          class="absolute bottom-28 left-1/2 -translate-x-1/2 flex gap-3 w-3/4"
+          x-transition:enter="transition ease-out duration-300"
+          x-transition:enter-start="opacity-0 scale-90"
+          x-transition:enter-end="opacity-100 scale-100"
+          x-transition:leave="transition ease-in duration-300"
+          x-transition:leave-start="opacity-100 scale-100"
+          x-transition:leave-end="opacity-0 scale-90"
+        >
+          <button
+            class="bg-white rounded-full text-grey font-bold py-4 px-8 text-sm grow"
+          >
+            Login
+          </button>
+          <button
+            class="bg-ungu rounded-full text-white font-bold py-4 px-8 text-sm grow"
+          >
+            Sign Up
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-12 gap-4 px-5 justify-center items-center">
+          <!-- cta -->
+          <div class="col-span-12 order-2 py-2 lg:col-span-4 lg:order-1">
+            <button
+              class="flex justify-center items-center mx-auto gap-5 py-2 px-9 rounded-xl mb-3 lg:mx-0 lg:justify-start bg-white lg:px-3 shadow-md"
+            >
+              <span>Explore the world!</span>
+              <img src="./src/asset/icons/work.svg" alt="" />
+            </button>
+
+            <h1
+              class="font-bold text-[40px] text-center leading-tight mx-auto md:w-3/4 md:my-4 lg:text-start lg:w-full"
+            >
+              Travel <span class="text-pink">top destination</span> of the world
+            </h1>
+
+            <p
+              class="text-grey text-center text-sm md:w-1/2 mx-auto lg:text-start lg:w-full"
+            >
+              We always make our customer happy by providing as many choices as
+              possible
+            </p>
+
+            <div
+              class="flex flex-col my-5 gap-3 md:flex-row justify-center items-center lg:justify-start w-full"
+            >
+              <button
+                class="rounded-full text-base py-3 px-9 font-bold bg-ungu text-white shadow-md lg:px-7 lg:py-1 w-full sm:w-1/4 lg:w-full"
+              >
+                <small>Get Started</small>
+              </button>
+              <button
+                class="rounded-full text-base py-3 px-9 font-bold flex justify-center items-center bg-red-100 lg:px-7 lg:py-1 w-full sm:w-1/4 lg:w-full"
+              >
+                <img src="./src/asset/icons/play.svg" alt="" />
+                <small class="font-bold">Watch Demo</small>
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Image -->
+          <div
+            class="col-span-12 order-1 flex justify-center items-center lg:col-span-8 lg:order-2"
+          >
+            <img src="./src/asset/img/hero.png" alt="" class="w-3/4" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
+</html>
